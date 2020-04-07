@@ -1,0 +1,10 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:257915668382:task-definition/registration-api-task:1"
+        LoadBalancerInfo:
+          ContainerName: "registration-api-container"
+          ContainerPort: 8080
+          
